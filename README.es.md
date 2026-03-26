@@ -1,6 +1,6 @@
 # Awesome Agent Skills
 
-[English](README.md) | [繁體中文](README.zh-TW.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md)
+[English](README.md) | [Português (Brasil)](README.pt-BR.md) | [繁體中文](README.zh-TW.md) | [简体中文](README.zh-CN.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [Español](README.es.md)
 
 Una lista seleccionada de habilidades, herramientas y capacidades para agentes de codificación de IA.
 
@@ -57,6 +57,7 @@ Las siguientes plataformas tienen soporte documentado para Agent Skills:
 | Codex (OpenAI) | [developers.openai.com](https://developers.openai.com/codex/skills) |
 | GitHub Copilot | [docs.github.com](https://docs.github.com/copilot/concepts/agents/about-agent-skills) |
 | VS Code | [code.visualstudio.com](https://code.visualstudio.com/docs/copilot/customization/agent-skills) |
+| OpenCode | [opencode.ai/docs](https://opencode.ai/docs) |
 | Antigravity | [antigravity.google](https://antigravity.google/docs/skills) |
 | Kiro | [kiro.dev](https://kiro.dev/docs/skills/) |
 | Gemini CLI | [geminicli.com](https://geminicli.com/docs/cli/skills/) |
@@ -244,6 +245,25 @@ cp -r skill-name ~/.claude/skills/
 ```
 
 La habilidad se carga automáticamente y se activa cuando es relevante.
+
+### Usando Habilidades en OpenCode
+
+Instala OpenCode globalmente para que esté disponible en cualquier proyecto:
+
+```bash
+curl -fsSL https://opencode.ai/install | bash
+# o
+npm i -g opencode-ai@latest
+brew install anomalyco/tap/opencode
+```
+
+Después de instalar, puedes ejecutar `opencode` desde cualquier workspace. Consulta la documentación para configuración y modelos.
+
+**Rutas de descubrimiento de skills:**
+
+- Proyecto: `.opencode/skills/<name>/SKILL.md`
+- Global: `~/.config/opencode/skills/<name>/SKILL.md`
+- También compatibles: `.claude/skills/<name>/SKILL.md`, `~/.claude/skills/<name>/SKILL.md`, `.agents/skills/<name>/SKILL.md`, `~/.agents/skills/<name>/SKILL.md`
 
 ### Usando Habilidades en Codex
 
@@ -455,7 +475,7 @@ Hacen cosas diferentes y funcionan muy bien juntas:
 
 ### ¿Qué herramientas de IA soportan Agent Skills?
 
-Actualmente soportadas: **Claude** (Claude.ai y Claude Code), **GitHub Copilot**, **VS Code**, **Codex** (OpenAI), **Antigravity** (Google), **Gemini CLI** y **Kiro**. La lista está creciendo a medida que más herramientas adoptan el estándar.
+Actualmente soportadas: **Claude** (Claude.ai y Claude Code), **GitHub Copilot**, **VS Code**, **OpenCode**, **Codex** (OpenAI), **Antigravity** (Google), **Gemini CLI** y **Kiro**. La lista está creciendo a medida que más herramientas adoptan el estándar.
 
 ### ¿Las Agent Skills ejecutan código?
 
